@@ -38,7 +38,8 @@
             <th scope="row">{{forloop.counter}}</th>
             <td>{{todo.title}}</td>
             <td>{{todo.desc}}</td>
-            <td>@mdo</td>
+            <td><a href="{% url 'update' todo.pk %}"><button type="button" class="btn btn-primary">Update</button></a>
+               <a href="{% url 'delete' todo.pk %}"><button type="button" class="btn btn-danger">Delete</button></td></a>
           </tr>
          {% endfor %}
         </tbody>
